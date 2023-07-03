@@ -2,4 +2,4 @@
 
 ## About
 
-C - 0x13. C - More singly linked lists Assignment
+C - 0x13. More singly linked lists Assignment
