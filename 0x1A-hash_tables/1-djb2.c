@@ -1,20 +1,21 @@
 /**
- * hash_djb2- implemantation of the djb2 algorithm
+ * hash_djb2 - implementation of the djb2 algorithm
  *
- * @str: the string passed
+ * @str: string used to generate hash value
  *
- * Return: djb2 value of the string
+ * Return: hash value
  */
 
 unsigned long int hash_djb2(const unsigned char *str)
 {
-	unsigned long int value = 5381;
+	unsigned long int hash;
+	int c;
 
-	while (*str)
+	hash = 5381;
+	while ((c = *str++))
 	{
-		value = (value * 33) + *str;
-		str++;
+		hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
 	}
 
-	return (value);
+	return (hash);
 }
