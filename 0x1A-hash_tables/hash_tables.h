@@ -3,6 +3,7 @@
 
 /**Includes**/
 #include <stdlib.h>
+#include <string.h>
 
 /**Structs**/
 
